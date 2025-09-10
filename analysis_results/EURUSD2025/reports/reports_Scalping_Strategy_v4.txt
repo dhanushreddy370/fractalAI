@@ -1,0 +1,80 @@
+**EUR/USD Momentum Scalper - Strategy Document (Version 4)**
+
+### 1. Strategy Name & Core Concept
+
+**Strategy Name:** EUR/USD Momentum Scalper  
+**Core Concept:** A high-frequency scalping strategy designed to exploit the EUR/USD's strong tendency for efficient directional moves and its predictable behavior at key structural levels. The strategy enters on confirmed momentum breaks and targets short-term continuation, leveraging the high probability of liquidity sweeps and breach-and-continue scenarios identified in the market profile.
+
+### 2. Market & Timeframe
+
+- **Market:** EUR/USD  
+- **Primary Timeframe:** M15 (for entry/exit execution)  
+- **Analysis Timeframes:** H1, H4, Daily (for key level identification)  
+- **Trading Session:** All sessions (key levels are session-agnostic per profile data)  
+
+### 3. Statistical Foundation (OHLC-only evidence)
+
+- **Intra-Candle Momentum:** 87.51% of M15 moves are efficient, indicating high reliability of short-term momentum continuation.  
+- **Key Level Reactions:**  
+  - Prev_D_Low has 47.72% liquidity sweep probability, making it a high-probability target for short-term stop hunts.  
+  - Prev_D_High has 43.29% breach-and-continue probability, indicating sustained upward momentum on breaks.  
+  - Prev_W_High shows 48.68% sweep probability, highlighting its significance as a liquidity target.  
+  - Rejection probabilities are lowest at daily lows (11.53%) and highest at H4 highs (24.87%), favoring momentum plays at daily lows and caution at H4 highs.  
+- **General Behavior:** Over 40% of interactions at most key levels result in either a liquidity sweep or breach-and-continue, supporting momentum-based entries.
+
+### 4. Entry Rules (pure price action)
+
+**Entry Condition 1: Momentum Break Entry**  
+- Identify a key level from the list below (prioritize Prev_D_Low, Prev_D_High, Prev_W_High due to high edge).  
+- Wait for price to approach within 0.05% of the level (to account for spread).  
+- Enter on a break of the level by at least one full M15 candle body (open-to-close movement) in the direction of the break.  
+- **Long Entry:** Break above Prev_D_High or other resistance level with bullish M15 close above level.  
+- **Short Entry:** Break below Prev_D_Low or other support level with bearish M15 close below level.  
+
+**Entry Condition 2: Liquidity Sweep Fade (Secondary)**  
+- If price sweeps a key level (e.g., Prev_D_Low or Prev_W_High) by exceeding it by 0.1% but then closes back within the level on M15, enter in the reversal direction on the close of that candle.  
+- Only activate if the sweep probability for that level is >40% (per profile).  
+
+**Key Levels Priority Order:**  
+1. Prev_D_Low / Prev_D_High  
+2. Prev_W_High  
+3. Prev_Session_High / Prev_Session_Low  
+4. Prev_H4_High / Prev_H4_Low  
+5. Prev_H1_High / Prev_H1_Low  
+
+### 5. Exit Rules (TP/SL and management, pure price-based)
+
+- **Stop Loss:**  
+  - Place SL at the opposite side of the key level breached. For example, for a long break above Prev_D_High, set SL at Prev_D_High minus 0.1%.  
+  - For sweep fade entries, set SL beyond the extreme of the sweep by 0.1%.  
+
+- **Take Profit:**  
+  - TP1: 0.1% profit target (scalping take-profit).  
+  - TP2: If momentum continues, hold for a break of the next key level in the direction of trade (e.g., for long, next resistance level).  
+
+- **Time-based Exit:** Close all positions after 4 M15 candles (1 hour) if not stopped or taken out by TP.  
+
+### 6. Risk Management (position sizing rules, daily risk caps)
+
+- **Position Sizing:** Risk 0.5% of capital per trade based on SL distance.  
+- **Daily Loss Cap:** Stop trading after 2% loss in a day.  
+- **Maximum Trades:** 10 trades per day.  
+- **Session Constraints:** No overlapping trades; wait for previous trade to exit before entering new one.  
+
+### 7. Key Performance Metrics (how to compute in backtests)
+
+- **Profit Factor:** (Total Profit from Winning Trades) / (Total Loss from Losing Trades)  
+- **Win Rate:** (Number of Winning Trades) / (Total Trades)  
+- **Max Drawdown:** Largest peak-to-trough decline in equity curve during backtest period.  
+- **Average Trade Duration:** Average number of M15 candles per trade.  
+- **Key Level Performance:** Track win rate and profit factor separately for trades at Prev_D_Low, Prev_D_High, etc., to validate profile statistics.  
+
+### 8. Coder Instructions (explicit implementation notes)
+
+- Calculate key levels daily: Prev_D_High, Prev_D_Low, Prev_H4_High, Prev_H4_Low, Prev_H1_High, Prev_H1_Low, Prev_Session_High, Prev_Session_Low (session defined as 00:00-24:00 UTC), Prev_W_High (weekly high from Friday close).  
+- Use M15 candles for entry/exit signals.  
+- Implement breaching logic: A level is breached if an M15 candle closes beyond it by at least 0.01% (to avoid noise).  
+- For sweep detection: A sweep occurs if price exceeds a key level by 0.1% but closes back within it.  
+- Backtest must record trade entries/exits, key level type, and outcome to verify strategy edge against profile data.  
+- Ensure spread and slippage are modeled at 0.5 pips per trade.  
+- **Dependency Setup:** Create a `requirements.txt` file containing `matplotlib` and ensure all dependencies are installed before running the backtester using the command `pip install -r requirements.txt`. This resolves the ModuleNotFoundError and ensures proper visualization functionality.

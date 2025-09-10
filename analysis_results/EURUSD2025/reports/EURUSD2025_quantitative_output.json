@@ -1,0 +1,82 @@
+{
+    "analysis_metadata": {
+        "input_file": "EURUSD2025.csv",
+        "total_m1_bars_analyzed": 12772
+    },
+    "intra_candle_path_dynamics": {
+        "M15": {
+            "efficient_trend_pct": 87.51445086705202,
+            "reversal_pct": 11.098265895953757,
+            "indecisive_pct": 1.3872832369942196
+        },
+        "H1": {
+            "efficient_trend_pct": 86.17511520737328,
+            "reversal_pct": 12.442396313364055,
+            "indecisive_pct": 1.3824884792626728
+        },
+        "H4": {
+            "efficient_trend_pct": 83.92857142857143,
+            "reversal_pct": 14.285714285714285,
+            "indecisive_pct": 1.7857142857142856
+        }
+    },
+    "key_level_reaction_analysis": {
+        "total_interactions_detected": 5524,
+        "level_breakdown": {
+            "Prev_H1_Low": {
+                "total_interactions": 1174,
+                "liquidity_sweep_pct": 41.90800681431005,
+                "breach_continue_pct": 40.71550255536627,
+                "consolidation_rejection_pct": 17.37649063032368
+            },
+            "Prev_H4_Low": {
+                "total_interactions": 817,
+                "liquidity_sweep_pct": 37.821297429620564,
+                "breach_continue_pct": 40.758873929008566,
+                "consolidation_rejection_pct": 21.41982864137087
+            },
+            "Prev_D_Low": {
+                "total_interactions": 373,
+                "liquidity_sweep_pct": 47.72117962466488,
+                "breach_continue_pct": 40.75067024128686,
+                "consolidation_rejection_pct": 11.528150134048257
+            },
+            "Prev_H1_High": {
+                "total_interactions": 1124,
+                "liquidity_sweep_pct": 40.65836298932384,
+                "breach_continue_pct": 37.544483985765126,
+                "consolidation_rejection_pct": 21.797153024911033
+            },
+            "Prev_H4_High": {
+                "total_interactions": 575,
+                "liquidity_sweep_pct": 35.30434782608695,
+                "breach_continue_pct": 39.82608695652174,
+                "consolidation_rejection_pct": 24.869565217391305
+            },
+            "Prev_D_High": {
+                "total_interactions": 231,
+                "liquidity_sweep_pct": 33.33333333333333,
+                "breach_continue_pct": 43.290043290043286,
+                "consolidation_rejection_pct": 23.376623376623375
+            },
+            "Prev_Session_High": {
+                "total_interactions": 530,
+                "liquidity_sweep_pct": 40.75471698113208,
+                "breach_continue_pct": 35.283018867924525,
+                "consolidation_rejection_pct": 23.962264150943398
+            },
+            "Prev_Session_Low": {
+                "total_interactions": 624,
+                "liquidity_sweep_pct": 40.38461538461539,
+                "breach_continue_pct": 40.86538461538461,
+                "consolidation_rejection_pct": 18.75
+            },
+            "Prev_W_High": {
+                "total_interactions": 76,
+                "liquidity_sweep_pct": 48.68421052631579,
+                "breach_continue_pct": 34.21052631578947,
+                "consolidation_rejection_pct": 17.105263157894736
+            }
+        }
+    }
+}

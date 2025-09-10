@@ -1,0 +1,39 @@
+============================================================
+=    Momentum Fade Scalper Performance Report    =
+============================================================
+
+--- I. Overall Performance Summary ---
+Initial Capital:           $10,000.00
+Final Capital:             $8,436.62
+Total Net Profit:          $-1,563.38 (-15.63%)
+CAGR:                      -97.41%
+Maximum Drawdown:          $1,500.52 (15.10%)
+
+--- II. Trading Performance ---
+Total Trades:              45
+Win Rate:                  24.44%
+Profit Factor:             0.23
+Expectancy per Trade:      $-34.74
+Average Win:               $41.36
+Average Loss:              $59.36
+
+--- III. Risk-Adjusted Metrics ---
+Sharpe Ratio:              -20.93
+Sortino Ratio:             -20.93
+Calmar Ratio:              -6.45
+
+--- IV. Strategy Analysis ---
+Long Trades:               11 trades, 45.45% win rate
+Short Trades:              34 trades, 17.65% win rate
+
+Key Level Performance:
+  prev_d_high: 11 trades, 45.45% win rate, $-12.45 avg P/L
+  prev_d_low: 28 trades, 17.86% win rate, $-41.07 avg P/L
+  prev_w_high: 6 trades, 16.67% win rate, $-46.07 avg P/L
+
+--- V. Trade Characteristics ---
+Average Holding Time:      113.67 minutes
+Average Spread Cost:       2.13 pips
+Average Slippage:          0.89 pips
+Total Commission:         $66.68
+

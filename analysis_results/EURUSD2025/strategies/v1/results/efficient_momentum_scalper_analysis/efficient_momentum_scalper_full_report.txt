@@ -1,0 +1,47 @@
+==================================================
+=    A+ Strategy Performance & Forensics Report    =
+==================================================
+
+--- I. Overall Performance Summary ---
+Initial Capital:           $10,000.00
+Final Capital:             $10,017.16
+Total Net Profit:          $17.16 (0.17%)
+CAGR:                      3.18%
+Maximum Drawdown:          $45.93 (0.46%)
+
+--- II. Backtesting Metrics ---
+Total Trades:              88
+Win Rate:                  4.55%
+Profit Factor:             1.15
+Expectancy per Trade:      $0.20
+Average Win:               $32.20
+Average Loss:              $1.33
+Longest Winning Streak:    1 trades
+Longest Losing Streak:     27 trades
+
+--- III. Advanced Performance Ratios ---
+Sharpe Ratio:              1.18
+Sortino Ratio:             16.55
+Calmar Ratio:              6.96
+
+--- IV. Stop-Loss Analysis ---
+Minimum SL:                7.90 pips
+Maximum SL:                67.50 pips
+Average SL:                14.95 pips
+
+SL Distribution:
+sl_range
+0-5 pips       0
+5-10 pips     10
+10-15 pips    50
+15-20 pips    15
+20+ pips      13
+
+--- VI. Trade Timing Forensics (Analysis of Losing Trades) ---
+Entry Too Early           67
+Directional Bias Wrong    12
+
+--- Percentages ---
+Entry Too Early           84.81
+Directional Bias Wrong    15.19
+==================================================

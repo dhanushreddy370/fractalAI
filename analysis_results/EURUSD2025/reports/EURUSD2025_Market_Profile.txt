@@ -1,0 +1,35 @@
+### Market Profile: EUR/USD
+
+**Section 1: Market Character Summary**
+
+The EUR/USD pair exhibits a strong tendency toward efficient directional movement across multiple timeframes. Intra-candle momentum is predominantly fast and decisive, with a high probability of price continuing in the current direction without significant reversals. This behavior is most pronounced at shorter timeframes (M15, H1) but remains consistent even at higher intervals (H4). The market displays low indecision, indicating that once momentum is established, it is likely to persist with minimal hesitation.
+
+**Section 2: Intra-Candle Path Analysis**
+
+| Timeframe | Efficient Trend (%) | Reversal (%) | Indecisive (%) |
+|-----------|---------------------|--------------|----------------|
+| M15       | 87.51               | 11.10        | 1.39           |
+| H1        | 86.18               | 12.44        | 1.38           |
+| H4        | 83.93               | 14.29        | 1.79           |
+
+The data indicates that over 83% of moves are efficient across all analyzed timeframes, implying that short-term momentum is highly reliable. Reversals are infrequent, occurring in only 11–14% of cases, which suggests that counter-trend scalping opportunities are statistically limited. The low indecision percentages (≤1.79%) further confirm that price action is typically decisive and prone to swift, uninterrupted moves.
+
+**Section 3: Key Level Reaction Probabilities**
+
+| Key Level            | Total Interactions | Liquidity Sweep (%) | Breach & Continue (%) | Consolidation/Rejection (%) |
+|----------------------|--------------------|---------------------|-----------------------|-----------------------------|
+| Prev_H1_Low          | 1174               | 41.91               | 40.72                 | 17.38                       |
+| Prev_H4_Low          | 817                | 37.82               | 40.76                 | 21.42                       |
+| Prev_D_Low           | 373                | 47.72               | 40.75                 | 11.53                       |
+| Prev_H1_High         | 1124               | 40.66               | 37.54                 | 21.80                       |
+| Prev_H4_High         | 575                | 35.30               | 39.83                 | 24.87                       |
+| Prev_D_High          | 231                | 33.33               | 43.29                 | 23.38                       |
+| Prev_Session_High    | 530                | 40.75               | 35.28                 | 23.96                       |
+| Prev_Session_Low     | 624                | 40.38               | 40.87                 | 18.75                       |
+| Prev_W_High          | 76                 | 48.68               | 34.21                 | 17.11                       |
+
+**Notable Observations for Scalping Edges:**
+- **Prev_D_Low** and **Prev_W_High** show the highest probability of immediate liquidity sweeps (47.72% and 48.68%, respectively), indicating these levels are frequently targeted for short-term stops.
+- **Prev_D_High** has the highest breach-and-continue probability (43.29%), suggesting that breaks above this level often lead to sustained upward momentum.
+- Rejection probabilities are generally lowest at daily lows (Prev_D_Low: 11.53%) and highest at H4 highs (Prev_H4_High: 24.87%), implying that daily lows are less likely to cause reversals compared to H4 highs.
+- Session-level and H1-level highs/lows show balanced sweep/breach probabilities (≈40%), making them moderately reliable for short-term momentum continuation.

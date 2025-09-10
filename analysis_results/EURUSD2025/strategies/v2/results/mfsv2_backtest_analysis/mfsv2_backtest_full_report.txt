@@ -1,0 +1,54 @@
+==================================================
+=    MFSv2 Strategy Performance Report    =
+==================================================
+
+--- I. Overall Performance Summary ---
+Initial Capital:           $10,000.00
+Final Capital:             $619.57
+Total Net Profit:          $-9,380.43 (-93.80%)
+CAGR:                      -100.00%
+Maximum Drawdown:          $9,476.26 (95.45%)
+
+--- II. Backtesting Metrics ---
+Total Trades:              1549
+Win Rate:                  64.69%
+Profit Factor:             0.27
+Expectancy per Trade:      $-6.06
+Average Win:               $3.54
+Average Loss:              $23.62
+Longest Winning Streak:    244 trades
+Longest Losing Streak:     120 trades
+
+--- III. Advanced Performance Ratios ---
+Sharpe Ratio:              -8.16
+Sortino Ratio:             -8.23
+Calmar Ratio:              -1.05
+
+--- IV. Stop-Loss Analysis ---
+Minimum SL:                5.63 pips
+Maximum SL:                195.45 pips
+Average SL:                49.63 pips
+
+SL Distribution:
+sl_range
+0-5 pips         0
+5-10 pips      111
+10-15 pips      92
+15-20 pips      90
+20+ pips      1256
+
+--- V. Trade Timing Analysis ---
+Holding Period (Entry to Exit):
+  - Average: 821.24 mins
+  - Median:  300.00 mins
+
+Day of Week Performance:
+day_of_week
+Friday      -1592.166665
+Monday      -1700.949086
+Sunday        377.780145
+Thursday     -292.779589
+Tuesday     -3763.803244
+Wednesday   -2408.507816
+
+==================================================

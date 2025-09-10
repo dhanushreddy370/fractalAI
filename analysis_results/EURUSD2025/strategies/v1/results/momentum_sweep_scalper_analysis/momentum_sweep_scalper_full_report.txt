@@ -1,0 +1,50 @@
+==================================================
+=    Momentum Sweep Scalper Performance Report    =
+==================================================
+
+--- I. Overall Performance Summary ---
+Initial Capital:           $10,000.00
+Final Capital:             $8,324.85
+Total Net Profit:          $-1,675.15 (-16.75%)
+CAGR:                      -96.49%
+Maximum Drawdown:          $1,622.61 (16.31%)
+
+--- II. Backtesting Metrics ---
+Total Trades:              52
+Win Rate:                  19.23%
+Profit Factor:             0.16
+Expectancy per Trade:      $-32.21
+Average Win:               $32.70
+Average Loss:              $47.67
+
+--- III. Advanced Performance Ratios ---
+Sharpe Ratio:              -21.35
+Sortino Ratio:             -25.18
+Calmar Ratio:              -5.92
+
+--- IV. Stop-Loss Analysis ---
+Minimum SL:                6.12 pips
+Maximum SL:                7.47 pips
+Average SL:                6.72 pips
+
+SL Distribution:
+sl_range
+0-5 pips       0
+5-10 pips     52
+10-15 pips     0
+15-20 pips     0
+20+ pips       0
+
+--- V. Trade Analysis ---
+Holding Period (Entry to Exit):
+  - Average: 253.85 mins
+  - Median:  0.00 mins
+
+Trade Reasons Distribution:
+reason
+Sweep below Prev_D_Low        25
+Sweep above Prev_D_High       16
+Breakout above Prev_D_High     6
+Sweep below Prev_W_High        5
+
+==================================================

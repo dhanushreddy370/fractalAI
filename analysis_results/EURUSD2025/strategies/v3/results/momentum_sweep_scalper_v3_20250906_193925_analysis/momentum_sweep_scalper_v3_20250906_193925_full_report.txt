@@ -1,0 +1,49 @@
+==================================================
+=    Momentum Sweep Scalper v3 Performance Report    =
+==================================================
+
+--- I. Overall Performance Summary ---
+Initial Capital:           $10,000.00
+Final Capital:             $9,960.76
+Total Net Profit:          $-39.24 (-0.39%)
+CAGR:                      -30.16%
+Maximum Drawdown:          $0.00 (0.00%)
+
+--- II. Backtesting Metrics ---
+Total Trades:              2
+Win Rate:                  50.00%
+Profit Factor:             0.43
+Expectancy per Trade:      $-19.62
+Average Win:               $29.42
+Average Loss:              $68.66
+Longest Winning Streak:    1 trades
+Longest Losing Streak:     1 trades
+
+--- III. Advanced Performance Ratios ---
+Sharpe Ratio:              -4.46
+Sortino Ratio:             inf
+Calmar Ratio:              inf
+
+--- IV. Stop-Loss Analysis ---
+Minimum SL:                7.75 pips
+Maximum SL:                9.87 pips
+Average SL:                8.81 pips
+
+SL Distribution:
+sl_range
+0-5 pips      0
+5-10 pips     2
+10-15 pips    0
+15-20 pips    0
+20+ pips      0
+
+--- V. Holding Period Analysis ---
+Average Holding Period:    37.50 mins
+Median Holding Period:     37.50 mins
+
+--- VI. Trade Timing Forensics (Analysis of Losing Trades) ---
+Entry Too Early    1
+
+--- Percentages ---
+Entry Too Early    100.0
+==================================================

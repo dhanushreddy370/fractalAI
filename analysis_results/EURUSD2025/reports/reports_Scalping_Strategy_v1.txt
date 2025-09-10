@@ -1,0 +1,101 @@
+**1. Strategy Name & Core Concept**
+
+**Momentum Sweep Scalper**
+A high-frequency scalping strategy that exploits EUR/USD's strong tendency for efficient directional movement by entering on confirmed momentum breaks following liquidity sweeps at key historical support/resistance levels. The strategy capitalizes on the high probability of continuation after price decisively interacts with previous session highs/lows and daily/weekly extremes.
+
+**2. Market & Timeframe**
+
+- **Market:** EUR/USD
+- **Primary Timeframe:** M15 (for entry/exit execution)
+- **Analysis Timeframes:** H1, H4, Daily (for level identification)
+
+**3. Statistical Foundation**
+
+The strategy is built exclusively on the following OHLC-derived statistical evidence from the Market Profile:
+
+- **87.51% efficient trend probability on M15** provides the core premise: momentum continuation is highly reliable intra-candle.
+- **Low reversal (11.10%) and indecision (1.39%) rates on M15** justify trading with the prevailing momentum rather than anticipating reversals.
+- **Prev_D_Low shows 47.72% liquidity sweep probability** indicating this level frequently attracts short-term stop hunts before continuation.
+- **Prev_W_High shows 48.68% liquidity sweep probability** making it a prime level for momentum initiation.
+- **Prev_D_High shows 43.29% breach-and-continue probability** suggesting strong follow-through after breakouts.
+- **Prev_D_Low shows only 11.53% rejection probability** confirming daily lows are weak reversal points and strong continuation triggers.
+
+**4. Entry Rules**
+
+**Long Entry Conditions (ALL must be met):**
+1. Price must approach within 0.0005 of a predefined key level from below: Prev_D_Low, Prev_W_High, or Prev_D_High
+2. Price must sweep the level (trade through it by minimum 0.0002) then show rejection candle (close back above level)
+3. Next candle must open and trade above the rejection candle's high
+4. Entry triggered at break of rejection candle high + 0.0001 buffer
+
+**Short Entry Conditions (ALL must be met):**
+1. Price must approach within 0.0005 of a predefined key level from above: Prev_D_High, Prev_W_High, or Prev_Session_High
+2. Price must sweep the level (trade through it by minimum 0.0002) then show rejection candle (close back below level)
+3. Next candle must open and trade below the rejection candle's low
+4. Entry triggered at break of rejection candle low - 0.0001 buffer
+
+**Prohibited Conditions:**
+- No entries during first/last 30 minutes of trading session
+- No entries if previous M15 candle showed >50% range retracement (indecision)
+- No entries if price is within 0.0010 of daily open (neutral zone)
+
+**5. Exit Rules**
+
+**Profit Target:**
+- Fixed 0.0015 from entry for all trades
+- Based on M15 average efficient move length derived from profile data
+
+**Stop Loss:**
+- Initial stop: 0.0008 from entry
+- Stop moved to breakeven + 0.0001 after price moves 0.0005 in favor
+- Trail stop using 0.0004 buffer below/above most recent M15 swing low/high
+
+**Time-based Exit:**
+- Close all positions after 4 M15 candles (1 hour) regardless of outcome
+
+**6. Risk Management**
+
+**Position Sizing:**
+- Maximum risk per trade: 0.25% of account equity
+- Position size = (0.0025 * Account Equity) / (Entry - Stop Distance)
+
+**Daily Risk Caps:**
+- Maximum 3 trades per day
+- Daily maximum loss: 1.0% of account equity
+- Trading suspended after 2 consecutive losing trades
+
+**Session Constraints:**
+- No trading during major news events (30 minutes before/after)
+- No trading during low liquidity periods (22:00-02:00 GMT)
+
+**7. Key Performance Metrics**
+
+**Backtest Calculation Methodology:**
+
+**Profit Factor:** Total Gross Profit / Total Gross Loss
+- Gross Profit = Sum of all winning trade P&L
+- Gross Loss = Sum of all losing trade P&L (absolute values)
+
+**Win Rate:** (Number of Winning Trades / Total Trades) * 100
+
+**Max Drawdown:** 
+- Calculate running equity curve peak-to-trough decline
+- Maximum peak-to-trough percentage decline during backtest period
+
+**Average Win/Loss Ratio:** 
+- Average winning trade profit / Average losing trade loss
+
+**Expectancy:** (Win Rate * Average Win) - (Loss Rate * Average Loss)
+
+**8. Coder Instructions**
+
+**Implementation Notes:**
+- Calculate key levels daily: Prev_D_High/Low, Prev_H4_High/Low, Prev_H1_High/Low, Prev_Session_High/Low
+- Weekly levels reset each Monday: Prev_W_High/Low
+- Session defined as 02:00-22:00 GMT
+- Liquidity sweep defined as price trading beyond level by minimum 0.0002
+- Rejection candle must close on opposite side of level from approach direction
+- Entry confirmation requires break of rejection candle extreme with buffer
+- All calculations must use OHLC data only - no indicators or volume
+- Backtest must account for spread (assume 0.00015 for EUR/USD)
+- Include 0.0001 slippage assumption on all entries/exits
